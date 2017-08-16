@@ -164,7 +164,7 @@ class processor implements \core_analytics\predictor {
             // Float with 2 decimal values.
             $min = $metadata['targetmin'];
             $max = $metadata['targetmax'];
-            $prediction = round(mt_rand($min * 100, $max * 100) / 100, 2);
+            $prediction = mt_rand($min * 100, $max * 100) / 100;
 
             $predictions[] = array($sampleid, $prediction);
         }
