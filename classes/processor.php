@@ -54,6 +54,7 @@ class processor implements \core_analytics\predictor {
      */
     public function train_classification($uniqueid, \stored_file $dataset, $outputdir) {
 
+        var_dump('TRAINING FILE CONTENTS');
         var_dump($dataset->get_content());
 
         $resultobj = new \stdClass();
@@ -72,6 +73,7 @@ class processor implements \core_analytics\predictor {
      */
     public function classify($uniqueid, \stored_file $dataset, $outputdir) {
 
+        var_dump('PREDICTION FILE CONTENTS');
         var_dump($dataset->get_content());
 
         $fh = $dataset->get_content_file_handle();
@@ -115,6 +117,7 @@ class processor implements \core_analytics\predictor {
      */
     public function evaluate_classification($uniqueid, $maxdeviation, $niterations, \stored_file $dataset, $outputdir) {
 
+        var_dump('EVALUATION FILE CONTENTS');
         var_dump($dataset->get_content());
 
         $resultobj = new \stdClass();
@@ -146,6 +149,7 @@ class processor implements \core_analytics\predictor {
      */
     public function estimate($uniqueid, \stored_file $dataset, $outputdir) {
 
+        var_dump('PREDICTION FILE CONTENTS');
         var_dump($dataset->get_content());
 
         $fh = $dataset->get_content_file_handle();
